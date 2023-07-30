@@ -6,6 +6,7 @@ import "./style/main.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Password from "./components/Password/Password";
+import Register from "./components/Register/Register";
 
 function App() {
   const user = useSelector(selectUser);
@@ -20,6 +21,7 @@ function App() {
           <Route index element={user ? <Logout /> : <Login />} />
 
           <Route path="password" element={<Password />} />
+          <Route path="register" element={<Register />} />
         </Routes>
       </div>
     </BrowserRouter>

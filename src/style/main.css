@@ -18,6 +18,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 a:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -50,7 +54,23 @@ a:hover {
     border: none;
     padding: 16px 0;
     margin-bottom: 32px;
-    cursor: pointer;
+}
+
+.right {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+} 
+
+.btn2 {
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+    padding: 12px 24px;
 }
 
 .inp {
@@ -113,7 +133,7 @@ a:hover {
 
 
 /* checkbox remember me */
-.check {
+.login__check {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -173,5 +193,13 @@ a:hover {
 .social-media {
     display: flex;
     gap: 16px;
+}
+
+/* register */
+.register__check {
+    display: flex;
+    gap: 16px;
+    align-self: flex-start;
+    margin: 24px 0 40px 0;
 }
 

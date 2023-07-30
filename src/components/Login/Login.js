@@ -100,6 +100,12 @@ function Login() {
             </a>
           </div>
         </form>
+        <div className="login__right right">
+          <p className="text">Don’t have an account?</p>
+          <Link to="register">
+            <button className="btn2 text">Sign Up</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
