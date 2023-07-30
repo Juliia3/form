@@ -5,6 +5,11 @@ import { login } from "../../features/userSlice";
 import hidden from "../../img/hidden.svg";
 import showed from "../../img/showed.svg";
 
+import google from "../../img/google.svg";
+import apple from "../../img/apple.svg";
+import twitter from "../../img/twitter.svg";
+import facebook from "../../img/facebook.svg";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -67,7 +72,7 @@ function Login() {
             Sign In
           </button>
           <div className="login__check check">
-            <p>Rmember me</p>
+            <p>Remember me</p>
             <input type="checkbox" id="highload1" name="highload1" />
             <label
               for="highload1"
@@ -75,6 +80,21 @@ function Login() {
               data-offlabel="off"
               class="lb1"
             ></label>
+          </div>
+          <p className="small-text">or login with</p>
+          <div className="social-media">
+            <a href="#">
+              <img className="icon" src={google} />
+            </a>
+            <a href="#">
+              <img className="icon" src={apple} />
+            </a>
+            <a href="#">
+              <img className="icon" src={twitter} />
+            </a>
+            <a href="#">
+              <img className="icon" src={facebook} />
+            </a>
           </div>
         </form>
       </div>

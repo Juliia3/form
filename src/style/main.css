@@ -14,6 +14,11 @@ body {
     font-weight: 400;
 }
 
+a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .page-wrapper {
     overflow: hidden;
     width: 100%;
@@ -100,6 +105,9 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 410px;
+    padding: 0 0 40px 0;
+    border-bottom: 1px solid #2A2C48;
+    margin-bottom: 40px;
 }
 
 #highload1 {       
@@ -141,4 +149,15 @@ body {
 }
 #highload1:checked+.lb1::before {
     color: #fff;
+}
+
+.small-text {
+    font-size: 16px;
+    color: #6A6E9F;
+    margin-bottom: 24px;
+}
+
+.social-media {
+    display: flex;
+    gap: 16px;
 }
