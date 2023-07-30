@@ -131,6 +131,16 @@ a:hover {
 	height: 24px;
 }
 
+.password__title {
+    margin: 0;
+}
+
+.password__container {
+    padding: 224px 0 0 155px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
 /* checkbox remember me */
 .login__check {

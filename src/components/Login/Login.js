@@ -22,6 +22,11 @@ function Login() {
 
   const dispatch = useDispatch();
 
+  // const user = {
+  //   email: "tesonet@gmail.com",
+  //   password: "partyanimal",
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
