@@ -1,0 +1,144 @@
+/* resets and global */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: transform 0.25s;
+}
+
+body {
+    background-color: #171829;
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+}
+
+.page-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/bg.png");
+    background-size: 50% 100vh;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+/* classes */
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.btn {
+    width: 410px;
+    background-color: #1D77FF;
+    border-radius: 36px;
+    color: #FFFFFF;
+    border: none;
+    padding: 16px 0;
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+
+.inp {
+    width: 410px;
+    background-color: transparent;
+    border: 1px solid #6A6E9F;
+    color: #6A6E9F;
+    padding: 16px 0 16px 24px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.inp::placeholder {
+    color: #6A6E9F;
+    font-family: 'Manrope', sans-serif;
+}
+
+.form {
+    max-width: 410px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 0;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+/* login */
+.login__text {
+    align-self: flex-end;
+    margin-bottom: 32px;
+    color: #D9DCFB;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.password {
+    position: relative;
+}
+.password-control {
+    position: absolute;
+	top: 12px;
+	right: 16px;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+
+
+/* checkbox remember me */
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 410px;
+}
+
+#highload1 {       
+    display: none;
+}
+#highload1+.lb1, #highload1+.lb1::before, #highload1+.lb1::after {
+    transition: all .3s;
+}
+#highload1+.lb1 {
+    display: inline-block; 
+    position: relative;
+    width: 46px;
+    height: 24px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#highload1+.lb1::after {
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: white;          
+}
+
+#highload1:checked+.lb1::after {
+    left: 24px;
+    background-color: #f7f7f7;
+}
+
+#highload1+.lb1 {             
+    background-color: #2A2C48;
+}
+#highload1:checked+.lb1 {
+    background-color: #1D77FF;
+}
+#highload1:checked+.lb1::before {
+    color: #fff;
+}
