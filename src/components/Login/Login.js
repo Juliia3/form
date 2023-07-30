@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/userSlice";
 
@@ -67,12 +68,14 @@ function Login() {
               )}
             </a>
           </div>
-          <p className="login__text">Forgot password?</p>
+          <Link to="password">
+            <p className="login__text">Forgot password?</p>
+          </Link>
           <button className="login__btn btn" type="submit">
             Sign In
           </button>
           <div className="login__check check">
-            <p>Remember me</p>
+            <p className="text">Remember me</p>
             <input type="checkbox" id="highload1" name="highload1" />
             <label
               for="highload1"
