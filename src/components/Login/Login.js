@@ -32,8 +32,8 @@ function Login() {
       const response = await axios.post(
         "https://playground.tesonet.lt/v1/tokens",
         {
-          username: "tesonet",
-          password: "partyanimal",
+          username: username,
+          password: password,
         }
       );
       console.log("response:", response.data);
@@ -108,7 +108,7 @@ function Login() {
               htmlFor="highload1"
               data-onlabel="on"
               data-offlabel="off"
-              class="lb1"
+              className="lb1"
             ></label>
           </div>
           <p className="small-text">or login with</p>
