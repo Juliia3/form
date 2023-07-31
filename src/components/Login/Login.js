@@ -25,7 +25,7 @@ function Login() {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleLogin = async () => {
     try {
@@ -54,7 +54,7 @@ function Login() {
 
   //   dispatch(
   //     login({
-  //       email: email,
+  //       username: username,
   //       password: password,
   //       loggedIn: true,
   //     })
