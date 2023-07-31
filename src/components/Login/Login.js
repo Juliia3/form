@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/userSlice";
 import "./login.css";
@@ -15,32 +16,50 @@ import facebook from "../../img/facebook.svg";
 import bg from "../../img/bg.png";
 
 function Login() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  // const user = {
-  //   email: "tesonet@gmail.com",
-  //   password: "partyanimal",
-  // };
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        "https://playground.tesonet.lt/v1/tokens",
+        {
+          username: "tesonet",
+          password: "partyanimal",
+        }
+      );
+      console.log("response:", response.data);
+    } catch (error) {
+      setError("Oops, email or password is wrong.");
+      console.error("Error:", error);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(
-      login({
-        email: email,
-        password: password,
-        loggedIn: true,
-      })
-    );
+    handleLogin();
   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   dispatch(
+  //     login({
+  //       email: email,
+  //       password: password,
+  //       loggedIn: true,
+  //     })
+  //   );
+  // };
 
   return (
     <div className="login">
@@ -49,11 +68,11 @@ function Login() {
           <h2 className="login__title title">Sign In</h2>
           <input
             className="login__input inp"
-            type="email"
+            type="text"
             placeholder="Email"
             id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <div className="login__password password">
             <input
@@ -86,7 +105,7 @@ function Login() {
             <p className="text">Remember me</p>
             <input type="checkbox" id="highload1" name="highload1" />
             <label
-              for="highload1"
+              htmlFor="highload1"
               data-onlabel="on"
               data-offlabel="off"
               class="lb1"
@@ -118,6 +137,7 @@ function Login() {
           </div>
         </div>
       </div>
+      {error && <p className="error-text">{error}</p>}
     </div>
   );
 }
