@@ -36,7 +36,13 @@ function Login() {
           password: password,
         }
       );
-      console.log("response:", response.data);
+      dispatch(
+        login({
+          username: username,
+          password: password,
+          loggedIn: true,
+        })
+     );
     } catch (error) {
       setError("Oops, email or password is wrong.");
       console.error("Error:", error);
@@ -48,18 +54,6 @@ function Login() {
 
     handleLogin();
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   dispatch(
-  //     login({
-  //       username: username,
-  //       password: password,
-  //       loggedIn: true,
-  //     })
-  //   );
-  // };
 
   return (
     <div className="login">
