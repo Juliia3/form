@@ -29,22 +29,51 @@ a:hover {
 }
 
 .page-wrapper {
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     height: 100vh;
-    background-image: url("../img/bg.png");
-    background-size: 50% 100vh;
-    background-repeat: no-repeat;
-    background-position: right center;
 }
 
 /* classes */
 
-.container {
+/* .container {
     max-width: 80%;
     padding: 0 0 0 155px;
-    /* margin: 0 auto; */
+} */
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
+
+.form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 0;
+    width: 50%;
+}
+
+.right {
+    width: 50%;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.right-text {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}  
 
 .btn {
     width: 410px;
@@ -55,15 +84,6 @@ a:hover {
     padding: 16px 0;
     margin-bottom: 32px;
 }
-
-.right {
-    position: absolute;
-    right: 60px;
-    top: 60px;
-    display: flex;
-    gap: 24px;
-    align-items: center;
-} 
 
 .btn2 {
     font-weight: 500;
@@ -89,14 +109,6 @@ a:hover {
     font-family: 'Manrope', sans-serif;
 }
 
-.form {
-    max-width: 410px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 96px 0;
-}
-
 .title {
     margin-bottom: 40px;
     font-size: 24px;
@@ -108,15 +120,6 @@ a:hover {
     font-size: 16px;
     font-weight: 400;
     color: #FFFFFF;
-}
-
-/* login */
-.login__text {
-    align-self: flex-end;
-    margin-bottom: 32px;
-    color: #D9DCFB;
-    font-size: 14px;
-    cursor: pointer;
 }
 
 .password {
@@ -131,85 +134,4 @@ a:hover {
 	height: 24px;
 }
 
-.password__title {
-    margin: 0;
-}
-
-.password__container {
-    padding: 224px 0 0 155px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-/* checkbox remember me */
-.login__check {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 410px;
-    padding: 0 0 40px 0;
-    border-bottom: 1px solid #2A2C48;
-    margin-bottom: 40px;
-}
-
-#highload1 {       
-    display: none;
-}
-#highload1+.lb1, #highload1+.lb1::before, #highload1+.lb1::after {
-    transition: all .3s;
-}
-#highload1+.lb1 {
-    display: inline-block; 
-    position: relative;
-    width: 46px;
-    height: 24px;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-#highload1+.lb1::after {
-    border-radius: 50%;
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 2px;
-    width: 21px;
-    height: 21px;
-    background-color: white;          
-}
-
-#highload1:checked+.lb1::after {
-    left: 24px;
-    background-color: #f7f7f7;
-}
-
-#highload1+.lb1 {             
-    background-color: #2A2C48;
-}
-#highload1:checked+.lb1 {
-    background-color: #1D77FF;
-}
-#highload1:checked+.lb1::before {
-    color: #fff;
-}
-
-.small-text {
-    font-size: 16px;
-    color: #6A6E9F;
-    margin-bottom: 24px;
-}
-
-.social-media {
-    display: flex;
-    gap: 16px;
-}
-
-/* register */
-.register__check {
-    display: flex;
-    gap: 16px;
-    align-self: flex-start;
-    margin: 24px 0 40px 0;
-}
 

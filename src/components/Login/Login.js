@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/userSlice";
+import "./login.css";
 
 import hidden from "../../img/hidden.svg";
 import showed from "../../img/showed.svg";
@@ -10,6 +11,8 @@ import google from "../../img/google.svg";
 import apple from "../../img/apple.svg";
 import twitter from "../../img/twitter.svg";
 import facebook from "../../img/facebook.svg";
+
+import bg from "../../img/bg.png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -106,10 +109,13 @@ function Login() {
           </div>
         </form>
         <div className="login__right right">
-          <p className="text">Don’t have an account?</p>
-          <Link to="register">
-            <button className="btn2 text">Sign Up</button>
-          </Link>
+          <img className="bg" src={bg} />
+          <div className="login__right-text right-text">
+            <p className="text">Don’t have an account?</p>
+            <Link to="register">
+              <button className="btn2 text">Sign Up</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

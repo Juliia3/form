@@ -1,0 +1,10 @@
+.register__form {
+    width: 410px;
+}
+
+.register__check{
+    padding: 24px 0 40px 0;
+    display: flex;
+    gap: 16px;
+    margin-right: auto;
+}

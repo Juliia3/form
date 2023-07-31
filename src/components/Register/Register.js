@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./register.css";
 
 import hidden from "../../img/hidden.svg";
 import showed from "../../img/showed.svg";
+
+import bg from "../../img/bg.png";
 
 function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,8 +15,8 @@ function Register() {
   return (
     <div className="register">
       <div className="register__container container">
-        <form className="login__form form">
-          <h2 className="login__title title">Sign Up</h2>
+        <form className="register__form form">
+          <h2 className="register__title title">Sign Up</h2>
           <input
             className="register__input inp"
             type="text"
@@ -26,7 +29,7 @@ function Register() {
           />
           <div className="register__password password">
             <input
-              className="login__input inp"
+              className="register__input inp"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
             />
@@ -44,7 +47,7 @@ function Register() {
           </div>
           <div className="register__password password">
             <input
-              className="login__input inp"
+              className="register__input inp"
               type={showPassword ? "text" : "password"}
               placeholder="Confirm Password"
             />
@@ -64,15 +67,18 @@ function Register() {
             <input className="text" type="checkbox" />
             <p className="text">I agree with Privacy Policy Terms</p>
           </div>
-          <button className="login__btn btn" type="submit">
+          <button className="register__btn btn" type="submit">
             Sign In
           </button>
         </form>
-        <div className="login__right right">
-          <p className="text">Already have an account?</p>
-          <Link to="/">
-            <button className="btn2 text">Sign In</button>
-          </Link>
+        <div className="register__right right">
+          <img className="bg" src={bg} />
+          <div className="register__right-text right-text">
+            <p className="text">Already have an account?</p>
+            <Link to="/">
+              <button className="btn2 text">Sign In</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

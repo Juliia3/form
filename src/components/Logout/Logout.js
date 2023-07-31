@@ -1,6 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../features/userSlice";
+import MuiCard from "../MuiCard/MuiCard";
+import "./logout.css";
 
 function Logout() {
   const dispatch = useDispatch();
@@ -12,8 +14,8 @@ function Logout() {
 
   return (
     <div className="logout">
-      <h2>Hello this is log out page</h2>
-      <button className="logout__btn btn" onClick={(e) => handleLogout(e)}>
+      <MuiCard />
+      <button className="btn logout__btn" onClick={(e) => handleLogout(e)}>
         Log out
       </button>
     </div>
