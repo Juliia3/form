@@ -42,10 +42,10 @@ function Login() {
           password: password,
           loggedIn: true,
         })
-     );
+      );
     } catch (error) {
       setError("Oops, email or password is wrong.");
-      console.error("Error:", error);
+      alert("Oops, email or password is wrong.", error);
     }
   };
 
